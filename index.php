@@ -18,11 +18,9 @@ Kirby::plugin('bvdputte/ical', [
                         $params[$currentParam[0]] = urldecode($currentParam[1]);
                     }
 
-                    $vevent = iCal::render($params);
-
                     header('Content-Type: text/calendar; charset=utf-8');
                     header('Content-Disposition: attachment; filename="cal.ics"');
-                    echo $vevent;
+                    echo iCal::render($params);;
                     die;
                 }
             ]
