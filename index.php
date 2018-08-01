@@ -20,7 +20,7 @@ Kirby::plugin('bvdputte/ical', [
 
                     header('Content-Type: text/calendar; charset=utf-8');
                     header('Content-Disposition: attachment; filename="cal.ics"');
-                    echo iCal::render($params);;
+                    echo iCal::render($params);
                     die;
                 }
             ]

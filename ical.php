@@ -2,7 +2,7 @@
 class iCal {
 
     public static function buildIcalUrl($params) {
-        $link = option('bvdputte.ical.routeSlug');
+        $link = "/" . option('bvdputte.ical.routeSlug');
         foreach($params as $paramKey => $paramValue) {
             $link .= "/" . $paramKey . ":" . urlencode($paramValue);
         }
