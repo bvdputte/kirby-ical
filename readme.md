@@ -20,7 +20,7 @@ Put the `ical` folder in your `site/plugins` folder.
 You can use following named variables to generate the .ics file:
 
 - `start`: Date when event starts. Format: `YYYY-MM-DD`
- - E.g. `2018-07-30`
+  - E.g. `2018-07-30`
 - `starttime`: Time when event starts.
  - Format: `00:00:00`
  - Default: `00:00:00`
