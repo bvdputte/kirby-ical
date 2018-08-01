@@ -22,30 +22,30 @@ You can use following named variables to generate the .ics file:
 - `start`: Date when event starts. Format: `YYYY-MM-DD`
   - E.g. `2018-07-30`
 - `starttime`: Time when event starts.
- - Format: `00:00:00`
- - Default: `00:00:00`
- - E.g. `08:00:00`
+  - Format: `00:00:00`
+  - Default: `00:00:00`
+  - E.g. `08:00:00`
 - `end`: Date when event ends. Format: `YYYY-MM-DD`
- - E.g. `2018-07-30`
+  - E.g. `2018-07-30`
 - `endtime`: Time when event ends.
- - Format: `00:00:00`
- - Default: `59:59:59`
- - E.g. `17:30:00`
+  - Format: `00:00:00`
+  - Default: `59:59:59`
+  - E.g. `17:30:00`
 - `summary`: Optional summary.
- - E.g. `Open house`
+  - E.g. `Open house`
 - `description`: Optional description.
- - E.g. `Come and check out our wonderful demo's. Free drinks and food!`
+  - E.g. `Come and check out our wonderful demo's. Free drinks and food!`
 - `url`: Optional event url.
- - E.g. `http://www.mywebsite.com/events/open-house-2018`
+  - E.g. `http://www.mywebsite.com/events/open-house-2018`
 - `linktext`: The text you want to be used in the generated <a> link.
- - E.g. `Add to calendar`
+  - E.g. `Add to calendar`
 
 ### Configurable options and opionated defaults
 
 - `routeSlug` = The slug used in the route to download the ics file.
- - Default: `ical`
+  - Default: `ical`
 - `downloadText`: The default <a> linktext.
- - Default = `Add to calendar`
+  - Default = `Add to calendar`
 
 Can be overridden via `option()`. E.g. `option("routeSlug", "myIcsSlug")`.
 
