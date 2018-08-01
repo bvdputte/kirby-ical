@@ -1,6 +1,0 @@
-title: Default
-
-fields:
-  files:
-    label: Files
-    type: files
