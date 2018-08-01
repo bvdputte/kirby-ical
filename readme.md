@@ -29,7 +29,7 @@ You can use following named variables to generate the .ics file:
   - E.g. `2018-07-30`
 - `endtime`: Time when event ends.
   - Format: `00:00:00`
-  - Default: `59:59:59`
+  - Default: `23:59:59`
   - E.g. `17:30:00`
 - `summary`: Optional summary.
   - E.g. `Open house`
@@ -42,12 +42,12 @@ You can use following named variables to generate the .ics file:
 
 ### Configurable options and opionated defaults
 
-- `routeSlug` = The slug used in the route to download the ics file.
+- `bvdputte.ical.routeSlug` = The slug used in the route to download the ics file.
   - Default: `ical`
-- `downloadText`: The default <a> linktext.
+- `bvdputte.ical.downloadText`: The default <a> linktext.
   - Default = `Add to calendar`
 
-Can be overridden via `option()`. E.g. `option("routeSlug", "myIcsSlug")`.
+Can be overridden via `option()` in the `config.php`. E.g. `option("bvdputte.ical.routeSlug", "myIcsSlug")`.
 
 ### Kirbytag example
 

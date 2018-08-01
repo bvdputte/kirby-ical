@@ -20,20 +20,24 @@ class iCal {
             "DTSTAMP:".date("Ymd\THis\Z")."\r\n";
 
         if (isset($params["start"])) {
+            $dtstart = "";
             if (isset($params["starttime"])) {
-                $start = self::_makedatetimestamp($params["start"], $params["starttime"]);
+                $dtstart = $params["start"] . " " . $params["starttime"];
             } else {
-                $start = self::_makedatetimestamp($params["start"]);
+                $dtstart = $params["start"] . " 00:00:00";
             }
-            $vevent .= "DTSTART:".$start."\r\n";
+            $dtstart = date("Ymd\THis\Z", strtotime($dtstart));
+            $vevent .= "DTSTART:".$dtstart."\r\n";
         }
         if (isset($params["end"])) {
+            $dtend = "";
             if (isset($params["endtime"])) {
-                $end = self::_makedatetimestamp($params["end"], $params["endtime"]);
+                $dtend = $params["end"] . " " . $params["endtime"];
             } else {
-                $end = self::_makedatetimestamp($params["end"]);
+                $dtend = $params["end"] . " 23:59:59";
             }
-            $vevent .= "DTEND:".$end."\r\n";
+            $dtend = date("Ymd\THis\Z", strtotime($dtend));
+            $vevent .= "DTEND:".$dtend."\r\n";
         }
         if (isset($params["summary"])) {
             $vevent .= "SUMMARY:". $params["summary"] ."\r\n";
@@ -43,10 +47,6 @@ class iCal {
             "END:VCALENDAR";
 
         return $vevent;
-    }
-
-    private static function _makedatetimestamp($date, $time = "00:00:00") {
-        return date("Ymd\THis\Z", strtotime($date . " " . $time));
     }
 
 }
